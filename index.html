@@ -1,266 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- шрифты -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-    <style>
-      /* общее!!!!!!!!!!! */
-      body {
-        background-color: bisque;
-        /* padding: 0 20%; */
-        font-size: 20px;
-        font-family: "Roboto", sans-serif;
-      }
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- шрифты -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+			rel="stylesheet" />
+		<title>Document</title>
+		<style>
+			/* общее!!!!!!!!!!! */
+			body {
+				background-color: bisque;
+				padding: 0 25%;
+				font-size: 20px;
+				font-family: "Roboto", sans-serif;
+			}
 
-      li::marker {
-        font-size: 1.5em;
-      }
+			li::marker {
+				font-size: 1.5em;
+			}
 
-      ul {
-        list-style-type: disc;
-        margin-top: 0;
-      }
+			ul {
+				list-style-type: disc;
+				margin-top: 0;
+			}
 
-      p {
-        margin: 0;
-      }
+			p {
+				margin: 0;
+			}
 
-      a {
-        color: rgb(110, 108, 22);
-        text-decoration: none;
-        font-weight: bold;
-      }
+			a {
+				color: #000;
+				text-decoration: none;
+				font-weight: bold;
+			}
 
-      h2 {
-        color: #fff;
-        background-color: #000;
-        margin: 0 0 20px 0;
-      }
+			h2 {
+				color: #fff;
+				background-color: #000;
+				margin: 0 0 20px 0;
+			}
 
-      /* левая сторона !!!!!!!!!!!!!!!!*/
-      .container-left {
-        width: 300px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+			/* левая сторона !!!!!!!!!!!!!!!!*/
+			.container-left {
+				width: 300px;
 
-      .personal-data__list li::before,
-      .info__education li::before,
-      .info__project li::before {
-        content: "";
-        border: 2px solid #000;
-        border-radius: 20%;
-        margin-left: -22px;
-        margin-right: 10px;
-      }
+				padding-right: 15px;
 
-      .separation {
-        display: flex;
-      }
-      .header__picture {
-        padding: 0 15%;
-        margin-bottom: 240px;
-      }
-      .header__img {
-        /* display: block; */
-        /* max-width: 200px; */
-        border-radius: 10%;
-        display: block;
-        max-width: 100%;
-        height: auto;
-      }
+				margin-right: auto;
+			}
 
-      .header__element {
-        list-style: none;
-      }
+			.personal-data__list li::before,
+			.info__education li::before,
+			.info__project li::before {
+				content: "";
+				border: 2px solid #000;
+				border-radius: 20%;
+				margin-left: -22px;
+				margin-right: 10px;
+			}
 
-      .header__element:not(:last-child) {
-        margin-bottom: 20px;
-      }
+			.separation {
+				display: flex;
+			}
+			.header__picture {
+				padding: 0 25%;
+				margin-bottom: 20px;
+			}
+			.header__img {
+				display: block;
+				max-width: 200px;
+				border-radius: 10%;
+			}
 
-      /* правая сторона !!!!!!!!!!!!!!!!!! */
-      .container-right {
-        width: 400px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding-top: 40px;
-        margin-left: auto;
-        margin-right: auto;
-      }
+			.header__element {
+				list-style: none;
+			}
 
-      .info {
-        margin-left: 10px;
-        border-left: 4px solid #000;
-        height: 100%;
-      }
+			.header__element:not(:last-child) {
+				margin-bottom: 20px;
+			}
 
-      .info__cap {
-        margin-bottom: 80px;
-      }
+			/* правая сторона !!!!!!!!!!!!!!!!!! */
+			.container-right {
+				width: 400px;
+				padding-left: 15px;
+				padding-right: 15px;
+				padding-top: 40px;
+				margin-left: auto;
+				margin-right: auto;
+			}
 
-      .info__name {
-        color: #fff;
-        background-color: #000;
-        margin: 0;
-        font-size: 50px;
-      }
-      .info__profession {
-        color: #fff;
-        background-color: #000;
-      }
+			.info {
+				border-left: 4px solid #000;
+				height: 100%;
+			}
 
-      .info__list {
-        list-style: none;
-        margin: 0;
-      }
+			.info__cap {
+				margin-bottom: 50px;
+			}
 
-      .info__list li:not(:last-child) {
-        margin-bottom: 20px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="separation">
-      <!-- левая сторона!!!!!!!!!!! -->
-      <header class="header">
-        <section class="personal-data">
-          <div class="container-left">
-            <div class="header__picture">
-              <img
-                class="header__img"
-                src="./img/photo_2023-01-20_16-20-12"
-                alt="autor"
-              />
-            </div>
-            <ul>
-              <li class="header__element">
-                <h2>Contacts</h2>
-                <ul class="personal-data__list">
-                  <li><a href="tel:+380976965166">+380 976 965 166</a></li>
-                  <li>
-                    <a href="mailto:anton.zv2002@gmail.com"
-                      >anton.zv2002@gmail.com</a
-                    >
-                  </li>
-                  <li>
-                    <a href="https://github.com/internet-user-0">Git hub</a>
-                  </li>
-                  <li><a href="https://t.me/zvInternetuser">Telegram</a></li>
-                  <li>
-                    <a
-                      href="https://www.linkedin.com/in/internet-user-173981229/"
-                      >LinkedIn</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="header__element">
-                <h2>Tech skills</h2>
-                <ul class="personal-data__list">
-                  <li>html5</li>
-                  <li>css</li>
-                  <li>js</li>
-                </ul>
-              </li>
-              <li class="header__element">
-                <h2>Softs skills</h2>
-                <ul class="personal-data__list">
-                  <li>Calm</li>
-                  <li>Effective listening skills</li>
-                  <li>Perceptive</li>
-                  <li>Eager to learn</li>
-                  <li>Conscientious</li>
-                </ul>
-              </li>
-              <li class="header__element">
-                <h2>Languages</h2>
-                <ul class="personal-data__list">
-                  <li>Englahs Intermediate</li>
-                  <li>Ukrainian Native</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </header>
-      <!-- правая сотона!!!!!!! -->
-      <main>
-        <section class="info">
-          <div class="container-right">
-            <div class="info__cap">
-              <h1 class="info__name">Anton Zvertanovski</h1>
-              <p class="info__profession">Front-end Devoloper</p>
-            </div>
-            <div>
-              <ul class="info__list">
-                <li>
-                  <h2>Summary</h2>
-                  <p>
-                    I am a Front-end Devoloper with knowledge of programming
-                    languages ​​such as html5 css and Java Script looking for a
-                    job to improve my skills and expand my knowledge in IT ready
-                    to work hard to improve my skills and thus climb the career
-                    ladder.
-                  </p>
-                </li>
-                <li>
-                  <h2>PROJECT</h2>
-                  <ul class="info__project">
-                    <li>
-                      <a href="https://irinka1010.github.io/IceCream/"
-                        >ice cream shop</a
-                      >
-                      <p>online ice cream shop made in a team via git hub</p>
-                      <a href="https://github.com/Irinka1010/IceCream"
-                        >link in Git Hub</a
-                      >
-                    </li>
-                    <li>
-                      <a href="https://internet-user-0.github.io/goit-js-hw-11/"
-                        >image search page</a
-                      >
-                      <p>small backend project</p>
-                      <a href="https://github.com/internet-user-0/goit-js-hw-11"
-                        >link in Git Hub</a
-                      >
-                    </li>
-                    <li>
-                      <a
-                        href="https://internet-user-0.github.io/goit-markup-hw-08/"
-                        >WebStudio</a
-                      >
-                      <p>small website made in html5 and scss</p>
-                      <a
-                        href="https://github.com/internet-user-0/goit-markup-hw-08"
-                        >link in Git Hub</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <h2>Education</h2>
-                  <ul class="info__education">
-                    <li>Д.Н.З.Ц.П.П.Р.К</li>
-                    <!-- ДНЗ "ЗВЕНИГОРОДСЬКИЙ ЦЕНТР ПІДГОТОВКИ І ПЕРЕПІДГОТОВКИ РОБІТНИЧИХ КАДРІВ" -->
-                    <li>GOIT</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-  </body>
+			.info__name {
+				color: #fff;
+				background-color: #000;
+				margin: 0;
+				font-size: 50px;
+			}
+			.info__profession {
+				color: #fff;
+				background-color: #000;
+				margin: 30px 0 0 0;
+			}
+
+			.info__list {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			.info__list li:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="separation">
+			<!-- левая сторона!!!!!!!!!!! -->
+			<header class="header">
+				<section class="personal-data">
+					<div class="container-left">
+						<div class="header__picture">
+							<img
+								class="header__img"
+								src="./img/photo_2023-01-20_16-20-12.jpg"
+								alt="autor" />
+						</div>
+						<ul>
+							<li class="header__element">
+								<h2>Contacts</h2>
+								<ul class="personal-data__list">
+									<li>
+										<a href="tel:+380976965166">+380 976 965 166</a>
+									</li>
+									<li>
+										<a href="mailto:anton.zv2002@gmail.com"
+											>anton.zv2002@gmail.com</a
+										>
+									</li>
+									<li>
+										<a href="https://github.com/internet-user-0"
+											>Git hub</a
+										>
+									</li>
+									<li>
+										<a href="https://t.me/zvInternetuser">Telegram</a>
+									</li>
+									<li>
+										<a
+											href="https://www.linkedin.com/in/internet-user-173981229/"
+											>LinkedIn</a
+										>
+									</li>
+									<li>
+										<a href="https://goo.gl/maps/xGzkdaFtWXakPEiv6"
+											>Uraine Zvenigorodka</a
+										>
+									</li>
+								</ul>
+							</li>
+							<li class="header__element">
+								<h2>Tech skills</h2>
+								<ul class="personal-data__list">
+									<li>JavaScript</li>
+									<li>Html5</li>
+									<li>CSS/SASS</li>
+									<li>React/Rebux</li>
+									<li>Git hub, Git</li>
+									<li>npm</li>
+									<li>Visual Studio Code</li>
+									<li>Figma</li>
+								</ul>
+							</li>
+							<li class="header__element">
+								<h2>Softs skills</h2>
+								<ul class="personal-data__list">
+									<li>Calm</li>
+									<li>Effective listening skills</li>
+									<li>Perceptive</li>
+									<li>Eager to learn</li>
+									<li>Conscientious</li>
+								</ul>
+							</li>
+							<li class="header__element">
+								<h2>Languages</h2>
+								<ul class="personal-data__list">
+									<li>Englihs- Intermediate</li>
+									<li>Ukrainian- Native</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</header>
+			<!-- правая сотона!!!!!!! -->
+			<main>
+				<section class="info">
+					<div class="container-right">
+						<div class="info__cap">
+							<h1 class="info__name">Anton Zvertanovski</h1>
+							<h2 class="info__profession">Front-end Devoloper</h2>
+						</div>
+						<div>
+							<ul class="info__list">
+								<li>
+									<h2>Summary</h2>
+									<p>
+										I am a Front-end Devoloper with knowledge of
+										programming languages ​​such as html5 css and Java
+										Script looking for a job to improve my skills and
+										expand my knowledge in IT ready to work hard to
+										improve my skills and thus climb the career
+										ladder.
+									</p>
+								</li>
+								<li>
+									<h2>PROJECT</h2>
+									<ul class="info__project">
+										<li>
+											<a
+												href="https://irinka1010.github.io/IceCream/"
+												>Ice cream shop</a
+											>
+											<p>
+												online ice cream shop made in a team via git
+												hub
+											</p>
+											<a
+												href="https://github.com/Irinka1010/IceCream"
+												>link in Git Hub</a
+											>
+										</li>
+										<li>
+											<a
+												href="https://internet-user-0.github.io/goit-js-hw-11/"
+												>Image search page</a
+											>
+											<p>small backend project</p>
+											<a
+												href="https://github.com/internet-user-0/goit-js-hw-11"
+												>link in Git Hub</a
+											>
+										</li>
+										<li>
+											<a
+												href="https://internet-user-0.github.io/goit-markup-hw-08/"
+												>WebStudio</a
+											>
+											<p>small website made in html5 and scss</p>
+											<a
+												href="https://github.com/internet-user-0/goit-markup-hw-08"
+												>link in Git Hub</a
+											>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h2>Education</h2>
+									<ul class="info__education">
+										<li>
+												"Звенигородський центр підготовки і
+												перепідготовки робітничих кадрів"
+											<p>Period of study 09.2017-07.2020</p>
+											<p>
+												Electric lignting installer. Driver c1
+												category
+											</p>
+										</li>
+										<li>GOIT</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
+	</body>
 </html>
