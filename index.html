@@ -13,6 +13,7 @@
 		<style>
 			/* общее!!!!!!!!!!! */
 			body {
+				padding: 30px 0 50px 0 ;
 				background-color: bisque;
 				height: 1700px;
 				font-size: 24px;
@@ -21,6 +22,9 @@
 
 			li::marker {
 				font-size: 1.5em;
+			}
+			li{
+				line-height: 50px;
 			}
 
 			ul {
@@ -40,7 +44,7 @@
 			h2 {
 				color: #fff;
 				background-color: #000;
-				margin: 0 0 20px 0;
+				margin: 0 0 40px 0;
 			}
 
 			/* левая сторона !!!!!!!!!!!!!!!!*/
@@ -54,11 +58,13 @@
 			.personal-data__list li::before,
 			.info__education li::before,
 			.info__project li::before {
-				display: inline-block;
+				display: block;
 
 				margin-left: -22px;
 				margin-right: 10px;
-				margin-bottom: 40px;
+			}
+			.personal-data__list li{
+				margin-bottom: 20px;
 			}
 
 			.info__project-link {
@@ -75,7 +81,7 @@
 			}
 			.header__img {
 				display: block;
-				max-width: 300px;
+				max-width: 350px;
 				border-radius: 10%;
 			}
 
@@ -126,7 +132,7 @@
 			}
 
 			.info__list li:not(:last-child) {
-				margin-bottom: 20px;
+				margin-bottom: 40px;
 			}
 		</style>
 	</head>
