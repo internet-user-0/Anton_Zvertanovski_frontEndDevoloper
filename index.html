@@ -13,7 +13,7 @@
 		<style>
 			/* общее!!!!!!!!!!! */
 			body {
-				padding: 40px 0 65px 0 ;
+				padding: 40px 0 65px 0;
 				/* background-color: bisque; */
 				height: 100%;
 				font-size: 24px;
@@ -23,13 +23,14 @@
 			li::marker {
 				font-size: 1.5em;
 			}
-			li{
-				line-height: 20px;
+			li {
+				line-height: 40px;
 			}
 
 			ul {
 				list-style-type: disc;
 				margin-top: 0;
+				padding-left: 0;
 			}
 
 			p {
@@ -42,8 +43,8 @@
 			}
 
 			h2 {
-				color: #fff;
-				background-color: #000;
+				color: #0E6CC2;
+				/* background-color: #000; */
 				padding: 5px;
 				margin: 0 0 40px 0;
 			}
@@ -52,8 +53,7 @@
 			.container-left {
 				min-width: 450px;
 
-
-				margin-right: auto;
+				margin-right: 60px;
 			}
 
 			.personal-data__list li::before,
@@ -64,8 +64,14 @@
 				margin-left: -22px;
 				margin-right: 10px;
 			}
-			.personal-data__list li{
+			.personal-data__list li {
 				margin-bottom: 20px;
+				list-style: none;
+			}
+			.svg {
+				width: 20px;
+				height: 20px;
+				margin-right: 5px;
 			}
 
 			.info__project-link {
@@ -74,7 +80,8 @@
 
 			.separation {
 				display: flex;
-				justify-content: space-evenly
+				justify-content: space-around;
+				
 			}
 			.header__picture {
 				padding: 0 20%;
@@ -98,15 +105,15 @@
 			/* правая сторона !!!!!!!!!!!!!!!!!! */
 			.container-right {
 				width: 700px;
-				padding-left: 15px;
-				padding-right: 15px;
+				/* padding-left: 25px; */
+				/* padding-right: 15px; */
 				padding-top: 40px;
-				margin-left: auto;
-				margin-right: auto;
+				/* margin-left: auto;
+				margin-right: auto; */
 			}
 
 			.info {
-				border-left: 4px solid #000;
+				/* border-left: 4px solid #000; */
 				height: 100%;
 			}
 
@@ -115,15 +122,19 @@
 			}
 
 			.info__name {
-				color: #fff;
-				background-color: #000;
+				color: #000;
+				/* background-color: #000; */
 				margin: 0;
 				font-size: 50px;
 			}
 			.info__profession {
-				color: #fff;
-				background-color: #000;
+				color: #000;
+				/* background-color: #000; */
 				margin: 30px 0 0 0;
+			}
+
+			.info__project{
+				list-style: none;
 			}
 
 			.info__list {
@@ -134,6 +145,9 @@
 
 			.info__list li:not(:last-child) {
 				margin-bottom: 40px;
+			}
+			.info__education{
+				list-style: none;
 			}
 		</style>
 	</head>
@@ -154,28 +168,44 @@
 								<h2>Contacts</h2>
 								<ul class="personal-data__list">
 									<li>
+										<svg class="svg">
+											<use href="./img/symbol-defs (1).svg#icon-phone"></use>
+										</svg>
 										<a href="tel:+380976965166">+380 976 965 166</a>
 									</li>
 									<li>
+										<svg class="svg">
+											<use href="./img/symbol-defs (1).svg#icon-envelop"></use>
+										</svg>
 										<a href="mailto:anton.zv2002@gmail.com"
 											>anton.zv2002@gmail.com</a
 										>
 									</li>
 									<li>
-										<a href="https://github.com/internet-user-0"
-											>GitHub</a
-										>
+										<svg class="svg">
+											<use href="./img/symbol-defs (1).svg#icon-github"></use>
+										</svg>
+										<a href="https://github.com/internet-user-0">GitHub</a>
 									</li>
 									<li>
+										<svg class="svg">
+											<use href="./img/symbol-defs (1).svg#icon-telegram"></use>
+										</svg>
 										<a href="https://t.me/zvInternetuser">Telegram</a>
 									</li>
 									<li>
+										<svg class="svg">
+											<use href="./img/symbol-defs (1).svg#icon-linkedin"></use>
+										</svg>
 										<a
 											href="https://www.linkedin.com/in/anton-zvertanovsky-173981229/"
 											>LinkedIn</a
 										>
 									</li>
 									<li>
+										<svg class="svg">
+											<use href="./img/symbol-defs (1).svg#icon-location"></use>
+										</svg>
 										<a href="https://goo.gl/maps/xGzkdaFtWXakPEiv6"
 											>Uraine, Zvenigorodka</a
 										>
@@ -186,13 +216,9 @@
 								<h2>Tech skills</h2>
 								<ul class="personal-data__list">
 									<li>JavaScript</li>
-									<li>Html5</li>
-									<li>CSS/SASS</li>
-									<li>React/Rebux</li>
-									<li>GitHub, Git</li>
-									<li>npm</li>
-									<li>Visual Studio Code</li>
-									<li>Figma</li>
+									<li>
+										React / Redux GitHub, Git, npm, Visual Studio Code, Figma
+									</li>
 								</ul>
 							</li>
 							<li class="header__element">
@@ -229,17 +255,35 @@
 								<li>
 									<h2>Summary</h2>
 									<p>
-										I am a Front-end Developer with knowledge of
-										programming languages ​​such as html5 css and Java
-										Script looking for a job to improve my skills and
-										expand my knowledge in IT ready to work hard to
-										improve my skills and thus climb the career
-										ladder.
+										I am a Frontend developer, JavaScript specialist, with
+										experience in creating interactive web applications based on
+										React/Redux. I also have skills in working with HTML and
+										CSS. I'm looking for a job to improve my skills so that
+										knowledge in the field of IT, are ready to work hard to
+										improve your skills.
 									</p>
 								</li>
 								<li>
 									<h2>PROJECTS</h2>
 									<ul class="info__project">
+										<li>
+											<a
+												class="info__project-link"
+												href="https://internet-user-0.github.io/goit-react-hw-08-phonebook/"
+												>Phonebook</a
+											>
+											/
+											<a
+												class="info__project-link"
+												href="https://github.com/internet-user-0/goit-react-hw-08-phonebook"
+												>link in GitHub</a
+											>
+											<p>Phone book for storing your contacts</p>
+											<p>Front-end. Vanilla JS, HTML/CSS</p>
+											<p>Libraries. React/Redux, Axios, Lodash</p>
+											<p>Public API. mockapi.io</p>
+											<p>Utilites. VSCode, Parcel, Postman</p>
+										</li>
 										<li>
 											<a
 												class="info__project-link"
@@ -252,10 +296,7 @@
 												href="https://github.com/internet-user-0/filmoteka-project-team"
 												>link in GitHub</a
 											>
-											<p>
-												Movie library, saving movies for viewing or
-												history
-											</p>
+											<p>Movie library, saving movies for viewing or history</p>
 											<p>Front-end. Vanilla JS, HTML/CSS</p>
 											<p>Libraries. Axios, TUI Pagination, Lodash</p>
 											<p>Public API. The MovieDB</p>
@@ -273,10 +314,7 @@
 												href="https://github.com/Irinka1010/IceCream"
 												>link in GitHub</a
 											>
-											<p>
-												Online ice cream shop made in a team via git
-												hub
-											</p>
+											<p>Online ice cream shop made in a team via git hub</p>
 											<p>Front-end. Vanilla JS, HTML/SCSS</p>
 											<p>Utilites. VSCode, Figma</p>
 										</li>
@@ -318,18 +356,12 @@
 										<li>
 											GOIT
 											<p>Full stack devoloper</p>
-											<p>
-												Started studying 01.2022- I continue my
-												studies
-											</p>
+											<p>Started studying 01.2022- I continue my studies</p>
 										</li>
 										<li>
 											"Zvenigorod University"
 											<p>Period of study 09.2017-07.2020</p>
-											<p>
-												Electric lignting installer. Driver c1
-												category
-											</p>
+											<p>Electric lignting installer. Driver c1 category</p>
 										</li>
 									</ul>
 								</li>
